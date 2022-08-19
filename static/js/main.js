@@ -1,21 +1,15 @@
 const URL_PARAMS = new URLSearchParams(window.location.search);
 const USERNAME = URL_PARAMS.get('username');
+const IMAGE = URL_PARAMS.get('avatar');
 
-// Show an element
-const show = (selector) => {
-  document.querySelector(selector).style.display = 'block';
-};
-
-// Hide an element
-const hide = (selector) => {
-  document.querySelector(selector).style.display = 'none';
-};
-
-// show username
+// set username
 const username = document.getElementById('username');
-
 if (USERNAME) {
-  hide('.content.unauthorized');
-  show('.content.authorized');
   username.textContent = USERNAME;
+}
+
+// set avatar
+const avatar = document.getElementById('avatar');
+if (IMAGE) {
+  avatar.src = IMAGE;
 }

@@ -1,6 +1,10 @@
-import path from 'path';
 import { Request, Response } from 'express';
+import { returnStaticHTML } from '../utils/helpers/html';
 
 export function getMain(req: Request, res: Response) {
-  return res.sendFile(path.join(__dirname, '../../static/index.html'));
+  return returnStaticHTML(res, 'index');
+}
+
+export function getProfile(req: Request, res: Response) {
+  return returnStaticHTML(res, 'profile');
 }

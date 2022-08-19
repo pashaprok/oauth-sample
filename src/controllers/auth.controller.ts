@@ -17,7 +17,9 @@ export async function oAuthGithubCallback(req: Request, res: Response) {
   if (accessToken) {
     const githubUser = await getGithubUser(accessToken);
 
-    return res.redirect(`/?id=${githubUser.id}&username=${githubUser.name}`);
+    return res.redirect(
+      `/profile?username=${githubUser.name}&avatar=${githubUser.avatar_url}`,
+    );
   }
 
   return res.redirect('/');
@@ -31,7 +33,9 @@ export async function oAuthGoogleCallback(req: Request, res: Response) {
       tokens.access_token,
       tokens.id_token,
     );
-    return res.redirect(`/?id=${googleUser.id}&username=${googleUser.name}`);
+    return res.redirect(
+      `/profile?username=${googleUser.name}&avatar=${googleUser.picture}`,
+    );
   }
 
   return res.redirect('/');
