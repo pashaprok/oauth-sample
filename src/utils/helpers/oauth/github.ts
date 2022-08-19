@@ -2,7 +2,7 @@ import axios from 'axios';
 import { oAuthConstants } from '../../../constants/oauth.constants';
 import { HttpMethods } from '../../../enums/httpMethods.enum';
 import { oAuthConfig } from '../../../config/oauth.config';
-import { GithubUser } from '../../../types/github';
+import { GithubUser } from '../../../types/github.types';
 
 export async function getGithubToken(code: string): Promise<string | null> {
   const request = await axios({
@@ -31,4 +31,8 @@ export async function getGithubUser(token: string): Promise<GithubUser> {
   });
 
   return data;
+}
+
+export function getGithubAuthURL() {
+  return `${oAuthConstants.paths.github.authorize}${oAuthConfig.github.clientId}`;
 }
