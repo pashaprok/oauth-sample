@@ -12,7 +12,8 @@
     "airbnb": "npx eslint . --ext .js,.jsx,.ts,.tsx",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docker:build": "docker build . -t oauthtest/node-web-app",
+    "docker:run": "docker run -p 5050:5050 -d oauthtest/node-web-app"
   },
   "author": "",
   "license": "ISC",
