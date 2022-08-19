@@ -34,10 +34,9 @@ h1 {
   line-height: 40px;
 }
 
-.img-github {
+.img-logo {
   margin-top: 32px;
-  width: 160px;
-  height: 160px;
+  width: 300px;
 }
 
 .btn {
@@ -48,10 +47,17 @@ h1 {
   padding-top: 2px;
   border-radius: 20px;
   color: white;
-  background: rgba(71, 43, 186, 1);
-  margin: 0 auto;
+  margin: 5px auto;
   border: none;
   font-size: 14px;
+}
+
+.btn.github {
+  background: #482bba;
+}
+
+.btn.google {
+  background: #DB4437;
 }
 
 input[type='text'] {
