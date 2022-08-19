@@ -6,8 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(71, 43, 186);
-  background: linear-gradient(0deg, rgba(71, 43, 186, 1) 0%, rgba(44, 25, 121, 1) 100%);
+  background: #1DA1F2;
 }
 
 .content {
@@ -21,6 +20,7 @@ body {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 3px 16px #222;
+  padding: 10px;
 }
 
 .content-bottom {
@@ -34,7 +34,7 @@ h1 {
   line-height: 40px;
 }
 
-.img-logo {
+.img {
   margin-top: 32px;
   width: 300px;
 }
@@ -53,24 +53,13 @@ h1 {
 }
 
 .btn.github {
-  background: #482bba;
+  background: #6cc644;
 }
 
 .btn.google {
   background: #DB4437;
 }
 
-input[type='text'] {
-  width: 180px;
-  line-height: 32px;
-  margin-bottom: 12px;
-  padding-left: 12px;
-}
-
-.sign-in-text {
-  font-size: 14px;
-  line-height: 22px;
-}
 .party-popper {
   display: inline-block;
   font-size: 52px;

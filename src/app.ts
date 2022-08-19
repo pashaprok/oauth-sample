@@ -13,12 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/static', express.static(path.join(__dirname, '../static')));
 
 // routes here
+app.use('/', mainRoute);
+app.use('/auth', authRoute);
 app.use(
   '/favicon.ico',
   express.static(path.join(__dirname, '../static/img/favicon.ico')),
 );
-app.use('/', mainRoute);
-app.use('/auth', authRoute);
 
 app.use(catchErrors);
 
