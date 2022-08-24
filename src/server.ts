@@ -7,9 +7,7 @@ import { appWorkLogger } from './utils/logger';
 
 function bootstrap() {
   app.listen(appConfig.port, () => {
-    appWorkLogger.info(
-      `App running... Open: http://localhost:${appConfig.port}`,
-    );
+    appWorkLogger.info(`App running... Open: ${appConfig.domain}`);
   });
 }
 

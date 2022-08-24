@@ -1,3 +1,5 @@
+import { appConfig } from '../config/app.config';
+
 export const oAuthConstants = {
   paths: {
     github: {
@@ -7,7 +9,7 @@ export const oAuthConstants = {
     },
     google: {
       authorize: 'https://accounts.google.com/o/oauth2/v2/auth',
-      redirect: 'http://localhost:5050/auth/google',
+      redirect: `${appConfig.domain}/auth/google`,
       scope: [
         'https://www.googleapis.com/auth/userinfo.profile',
         'https://www.googleapis.com/auth/userinfo.email',

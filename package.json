@@ -9,8 +9,7 @@
     "prestart": "npm run build",
     "start": "node -r dotenv/config ./dist/server.js",
     "dev": "nodemon -r dotenv/config ./src/server.ts",
-    "airbnb": "npx eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint": "npx eslint . --ignore-path .eslintignore --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "docker:build": "docker build . -t oauthtest/node-web-app",
     "docker:run": "docker run -p 5050:5050 -d oauthtest/node-web-app"

@@ -21,6 +21,6 @@ jobs:
       - name: code format
         run: npm run format
       - name: run airbnb lint check
-        run: npm run airbnb
+        run: npm run lint
       - name: app build
         run: npm run build
